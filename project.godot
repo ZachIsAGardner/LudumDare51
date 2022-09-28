@@ -1,0 +1,27 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+run/main_scene="res://Test.tscn"
+
+[mono]
+
+project/assembly_name="UnnamedProject"
+
+[rendering]
+
+quality/directional_shadow/size=8192
+quality/shadow_atlas/size=8192
+quality/shadow_atlas/cubemap_size=1024
+quality/shadow_atlas/quadrant_0_subdiv=2
+quality/shadow_atlas/quadrant_1_subdiv=3
+quality/shadow_atlas/quadrant_2_subdiv=4
+quality/shadow_atlas/quadrant_3_subdiv=5
