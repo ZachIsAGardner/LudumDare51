@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Title.cs" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 137.0
+margin_top = 147.0
+margin_right = 355.0
+margin_bottom = 161.0
+rect_pivot_offset = Vector2( 195, -20 )
+text = "press z to start"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 123.0
+margin_top = 111.0
+margin_right = 341.0
+margin_bottom = 125.0
+rect_pivot_offset = Vector2( 195, -20 )
+text = "Every 10 Seconds the Video Game"
