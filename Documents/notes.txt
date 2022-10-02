@@ -1,3 +1,49 @@
+--------
+| IDEA |
+--------
+
+warioware
+
+CONTROLS
+arrows 
+z
+x
+
+MINI-GAMES
+
+platformer
+punch someone in the face
+deliver mail
+pet the dog
+survive waves of enemies
+water the plant
+feed the dog
+put together the furniture
+run from the dinosaur
+shoot the targets
+watch my dance
+ddr
+galaga
+deliver the sandwhich
+brush the teeth
+
+fps roguelike where every room has a random objective you must complete in 10 seconds
+- shoot the pink thing
+- don't die
+- press the button
+- jump between islands
+
+fps controller
+- move - wasd
+- equip - right click
+- jump - space bar
+- look - mouse
+- shoot - left click
+
+---------
+| THEME |
+---------
+
 Every 10 seconds
 - every x seconds u have to eat somethin or u die
 - something falls every x seconds
@@ -31,12 +77,14 @@ Every 10 seconds
 - return to place every 10 seconds
 - music game
 - turn based game where u only have 10 seconds to decide
-- warioware
 - repitition
 
 - factory game
     - get electricity power every 10 seconds
     - use to make powerups to fight waves of enemies
+
+
+
 
 
 

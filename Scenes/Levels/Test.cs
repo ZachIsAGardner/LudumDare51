@@ -7,7 +7,7 @@ public class Test : Level
     {
         base._Ready();
 
-        Area g = this.GetChildWithName("Goal") as Area;
+        Area g = this.GetChild("Goal") as Area;
         g.Connect("body_shape_entered", this, "OnBodyShapeEntered");
     }
 

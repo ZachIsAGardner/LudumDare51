@@ -35,7 +35,7 @@ public static class NodeExtensions
         return node.GetHierarchy().Where(x => x.GetType() == typeof(T)).Select(x => x as T).ToList<T>();
     }
 
-    public static Node GetChildWithName(this Node node, string name)
+    public static Node GetChild(this Node node, string name)
     {
         return node.GetHierarchy().Find(x => x.Name == name);
     }

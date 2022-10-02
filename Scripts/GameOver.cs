@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Title : Control
+public class GameOver : Control
 {
     public override void _Process(float delta)
     {
@@ -9,7 +9,7 @@ public class Title : Control
 
         if (Input.IsActionJustPressed("ui_accept"))
         {
-            
+            Game.Load("Title");
         }
     }
 }

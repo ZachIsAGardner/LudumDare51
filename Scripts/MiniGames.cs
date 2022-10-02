@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class Game : Node
+public class MiniGames : Node
 {
     float duration = 10;
     float time;
@@ -29,10 +29,10 @@ public class Game : Node
 
         time = duration;
 
-        timerLabel = this.GetChildWithName("Timer") as Label;
-        titleLabel = this.GetChildWithName("Title") as Label;
-        hpLabel = this.GetChildWithName("Hp") as Label;
-        container = this.GetChildWithName("Container");
+        timerLabel = this.GetChild("Timer") as Label;
+        titleLabel = this.GetChild("Title") as Label;
+        hpLabel = this.GetChild("Hp") as Label;
+        container = this.GetChild("Container");
 
         Load();
     }
@@ -83,8 +83,15 @@ public class Game : Node
             time = duration;
 
             hp--;
-            hpLabel.Text = $"HP : {hp}";
-            Load();
+            hpLabel.Text = $"HP: {hp}";
+            if (hp <= 0)
+            {
+                Game.Load("GameOver");
+            }
+            else
+            {
+                Load();
+            }
         }
     }
 }

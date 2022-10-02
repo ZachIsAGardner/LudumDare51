@@ -116,5 +116,14 @@ public static class NumberExtensions
     {
         return (vector2.x - other.x).Abs() + (vector2.y - other.y).Abs();
     }
+
+    public static float MoveTowardsWithSpeed(this float num, float destination, float speed)
+    {
+        float direction = (destination - num).Sign();
+        float change = (direction * speed) * Game.Delta;
+        float position = num + change;
+        if ((num - destination).Abs() <= change.Abs()) position = destination;
+        return position;
+    }
 }
 

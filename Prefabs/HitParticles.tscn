@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/TimedDestruction.cs" type="Script" id=1]
+
+[sub_resource type="Curve" id=23]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=24]
+curve = SubResource( 23 )
+
+[sub_resource type="ParticlesMaterial" id=21]
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3( 1, 1, 1 )
+spread = 180.0
+initial_velocity = 20.0
+initial_velocity_random = 1.0
+scale_curve = SubResource( 24 )
+color = Color( 0.756863, 0, 1, 1 )
+
+[sub_resource type="SpatialMaterial" id=25]
+flags_unshaded = true
+flags_no_depth_test = true
+
+[sub_resource type="SphereMesh" id=22]
+material = SubResource( 25 )
+radius = 0.25
+height = 0.5
+radial_segments = 6
+rings = 6
+
+[node name="HitParticles" type="Particles"]
+transform = Transform( 0.99913, 0, 0, 0, 0.99913, 0, 0, 0, 0.99913, 0, 0, 0 )
+amount = 50
+lifetime = 0.1
+process_material = SubResource( 21 )
+draw_pass_1 = SubResource( 22 )
+
+[node name="TimedDestruction" type="Node" parent="."]
+script = ExtResource( 1 )
+time = 0.1
