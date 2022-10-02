@@ -8,12 +8,27 @@ public class Bullet : RigidBody
 
     [Export]
     float time = 3;
+    float duration = 3;
+
+    MeshInstance mesh;
+    Vector3 meshScale;
+
+    OmniLight light;
+    float lightRange;
 
     public override void _Ready()
     {
         base._Ready();
 
         Connect("body_entered", this, "OnBodyEntered");
+
+        mesh = this.GetChild<MeshInstance>();
+        meshScale = mesh.Scale;
+
+        light = this.GetChild<OmniLight>();
+        lightRange = light.OmniRange;
+
+        duration = time;
     }
 
     public override void _Process(float delta)
@@ -21,9 +36,8 @@ public class Bullet : RigidBody
         base._Process(delta);
 
         time -= delta;
-        this.GetChild<MeshInstance>().Scale -= (new Vector3(0.25f, 0.25f, 0.25f) * delta);
-        this.GetChild<OmniLight>().OmniRange -= delta;
-
+        mesh.Scale = meshScale * (time / duration);
+        light.OmniRange = lightRange * (time / duration);
 
         if (time <= 0)
         {

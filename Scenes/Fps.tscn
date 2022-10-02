@@ -79,7 +79,7 @@ contact_monitor = true
 [node name="CollisionShape" type="CollisionShape" parent="Box"]
 shape = SubResource( 8 )
 
-[node name="MeshInstance" type="MeshInstance" parent="Box"]
+[node name="Mesh" type="MeshInstance" parent="Box"]
 mesh = SubResource( 9 )
 
 [node name="Liver" type="Area" parent="Box"]
@@ -107,12 +107,12 @@ contact_monitor = true
 [node name="CollisionShape" type="CollisionShape" parent="Box2"]
 shape = SubResource( 8 )
 
-[node name="MeshInstance" type="MeshInstance" parent="Box2"]
+[node name="Mesh" type="MeshInstance" parent="Box2"]
 mesh = SubResource( 9 )
 
 [node name="Liver" type="Area" parent="Box2"]
 script = ExtResource( 7 )
-Hp = 3
+Hp = 999
 
 [node name="CollisionShape" type="CollisionShape" parent="Box2/Liver"]
 transform = Transform( 1.09284, 0, 0, 0, -4.77696e-08, -1.09284, 0, 1.09284, -4.77696e-08, 0, -2.38419e-07, 0 )
